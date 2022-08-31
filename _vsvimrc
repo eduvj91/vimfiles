@@ -1,0 +1,65 @@
+" Settings
+
+set number "Mostrar números laterales
+set relativenumber "Números relativos
+set clipboard=unnamedplus "Copiar en el porta papeles general
+set showcmd "Muestra comandos en la barra de status
+
+" Keys
+
+" Tecla líder
+let mapleader=" "
+
+" Salir del modo Insertar
+imap jj <Esc>
+
+" Mover al inicio y al final
+nmap <leader>h 0
+nmap <leader>l $
+xnoremap <leader>h 0
+xnoremap <leader>l $
+
+
+" Borrar palabra completa
+nnoremap <leader>d diwx
+imap jd <Esc> :vsc Editar.Eliminarhastaeliniciodelapalabra<cr>i
+
+" Guardar y Salir de Vim
+nnoremap <leader>w :w<CR>
+nnoremap <leader>Q :q<CR>
+nnoremap <leader>% :so ~/vimfiles/_vsvimrc<CR>
+
+" Cerrar buffer
+nnoremap <leader>q :bdelete<CR>
+
+" VSVIM CONFIG
+
+xnoremap <a-j> :vsc Editar.Bajarlíneasseleccionadas<cr>
+xnoremap <a-k> :vsc Editar.Subirlíneasseleccionadas<cr>
+nnoremap <a-j> :vsc Editar.Bajarlíneasseleccionadas<cr>
+nnoremap <a-k> :vsc Editar.Subirlíneasseleccionadas<cr>
+map <leader>c :vsc Editar.Alternarcomentariodelínea<cr>
+map <leader>b :vsc Editar.Alternarcomentariodebloque<cr>
+nnoremap <leader>ic :vsc Editar.Insertarcomentario<cr>
+nnoremap <leader>f :vsc Editar.Darformatoaldocumento<cr>
+nnoremap <leader>z :vsc Editar.Desplazaralcentrodelalínea<cr>
+nnoremap <leader>r :vsc Editar.Cambiarnombre<cr>
+xnoremap <leader>s :vsc editar.rodearcon<cr>
+nnoremap sc o/*-------------- titulo -------------*/<Esc>bbciw
+inoremap jsc /*-------------- titulo -------------*/<Esc>bbciw
+inoremap jc // 
+inoremap jb /**/<Esc>hi<cr><Esc>kA<cr>
+
+nnoremap <Tab> :vsc Ventana.Pestañasiguiente<cr>
+nnoremap <s-Tab> :vsc Ventana.Pestañaanterior<cr>
+nnoremap <leader>n :vsc Herramientas.MovetoNextSpellingIssue<cr>
+nnoremap <leader>N :vsc Herramientas.MovetoPriorSpellingIssue<cr>
+nnoremap u :vsc Editar.Deshacer<cr>
+nnoremap U :vsc Editar.Rehacer<cr>
+nnoremap ge :vsc Ver.Errorsiguiente<cr>
+
+" EASYMOTION PLUG VS
+nnoremap <leader><leader> :vsc Tools.InvokePeasyMotion<CR>
+
+" Cancelar recordings con que
+map q <Nop>
