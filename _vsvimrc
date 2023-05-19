@@ -2,8 +2,10 @@
 
 set number "Mostrar números laterales
 set relativenumber "Números relativos
-set clipboard=unnamedplus "Copiar en el porta papeles general
+set clipboard=unnamed "Copiar en el porta papeles general
 set showcmd "Muestra comandos en la barra de status
+set autoindent "Sangria con los símbolos de < y > que en modo normal
+
 
 " Keys
 
@@ -14,7 +16,7 @@ let mapleader=" "
 imap jj <Esc>
 
 " Mover al inicio y al final
-nmap <leader>h 0
+nmap <leader>h 0w
 nmap <leader>l $
 xnoremap <leader>h 0
 xnoremap <leader>l $
@@ -40,7 +42,6 @@ nnoremap <a-j> :vsc Editar.Bajarlíneasseleccionadas<cr>
 nnoremap <a-k> :vsc Editar.Subirlíneasseleccionadas<cr>
 map <leader>c :vsc Editar.Alternarcomentariodelínea<cr>
 map <leader>b :vsc Editar.Alternarcomentariodebloque<cr>
-nnoremap <leader>ic :vsc Editar.Insertarcomentario<cr>
 nnoremap <leader>f :vsc Editar.Darformatoaldocumento<cr>
 nnoremap <leader>z :vsc Editar.Desplazaralcentrodelalínea<cr>
 nnoremap <leader>r :vsc Editar.Cambiarnombre<cr>
@@ -57,6 +58,7 @@ nnoremap <leader>N :vsc Herramientas.MovetoPriorSpellingIssue<cr>
 nnoremap u :vsc Editar.Deshacer<cr>
 nnoremap U :vsc Editar.Rehacer<cr>
 nnoremap ge :vsc Ver.Errorsiguiente<cr>
+nnoremap <leader>run :vsc Depurar.Iniciarsindepurar<cr>
 
 " EASYMOTION PLUG VS
 nnoremap <leader><leader> :vsc Tools.InvokePeasyMotion<CR>
