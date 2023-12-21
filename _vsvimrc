@@ -13,13 +13,13 @@ set autoindent "Sangria con los símbolos de < y > que en modo normal
 let mapleader=" "
 
 " Salir del modo Insertar
-imap jj <Esc>
+imap jj <C-c>
 
 " Mover al inicio y al final
-nmap <leader>h 0w
-nmap <leader>l $
-xnoremap <leader>h 0
-xnoremap <leader>l $
+nmap <leader>h ^
+nmap <leader>l g_
+xnoremap <leader>h ^
+xnoremap <leader>l g_
 
 
 " Borrar palabra completa
@@ -32,7 +32,7 @@ nnoremap <leader>Q :q<CR>
 nnoremap <leader>% :so ~/vimfiles/_vsvimrc<CR>
 
 " Cerrar buffer
-nnoremap <leader>q :bdelete<CR>
+nnoremap <leader>bd :bdelete<CR>
 
 " VSVIM CONFIG
 
@@ -43,22 +43,17 @@ nnoremap <a-k> :vsc Editar.Subirlíneasseleccionadas<cr>
 map <leader>c :vsc Editar.Alternarcomentariodelínea<cr>
 map <leader>b :vsc Editar.Alternarcomentariodebloque<cr>
 nnoremap <leader>f :vsc Editar.Darformatoaldocumento<cr>
-nnoremap <leader>z :vsc Editar.Desplazaralcentrodelalínea<cr>
 nnoremap <leader>r :vsc Editar.Cambiarnombre<cr>
 xnoremap <leader>s :vsc editar.rodearcon<cr>
-nnoremap sc o/*-------------- titulo -------------*/<Esc>bbciw
-inoremap jsc /*-------------- titulo -------------*/<Esc>bbciw
-inoremap jc // 
-inoremap jb /**/<Esc>hi<cr><Esc>kA<cr>
 
-nnoremap <Tab> :vsc Ventana.Pestañasiguiente<cr>
-nnoremap <s-Tab> :vsc Ventana.Pestañaanterior<cr>
-nnoremap <leader>n :vsc Herramientas.MovetoNextSpellingIssue<cr>
-nnoremap <leader>N :vsc Herramientas.MovetoPriorSpellingIssue<cr>
+nnoremap <S-L> :vsc Ventana.Pestañasiguiente<cr>
+nnoremap <S-H> :vsc Ventana.Pestañaanterior<cr>
+nnoremap gn :vsc Herramientas.MovetoNextSpellingIssue<cr>
+nnoremap gN :vsc Herramientas.MovetoPriorSpellingIssue<cr>
 nnoremap u :vsc Editar.Deshacer<cr>
 nnoremap U :vsc Editar.Rehacer<cr>
 nnoremap ge :vsc Ver.Errorsiguiente<cr>
-nnoremap <leader>run :vsc Depurar.Iniciarsindepurar<cr>
+nnoremap <leader>p :vsc Depurar.Iniciarsindepurar<cr>
 
 " EASYMOTION PLUG VS
 nnoremap <leader><leader> :vsc Tools.InvokePeasyMotion<CR>
