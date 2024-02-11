@@ -3,8 +3,8 @@
 set number "Mostrar números laterales
 set relativenumber "Números relativos
 set clipboard=unnamed "Copiar en el porta papeles general
-set showcmd "Muestra comandos en la barra de status
-set autoindent "Sangria con los símbolos de < y > que en modo normal
+" set showcmd "Muestra comandos en la barra de status
+" set autoindent "Sangria con los símbolos de < y > que en modo normal
 
 
 " Keys
@@ -56,7 +56,29 @@ nnoremap ge :vsc Ver.Errorsiguiente<cr>
 nnoremap <leader>p :vsc Depurar.Iniciarsindepurar<cr>
 
 " EASYMOTION PLUG VS
-nnoremap <leader><leader> :vsc Tools.InvokePeasyMotion<CR>
+" nnoremap <leader><leader> :vsc Tools.InvokePeasyMotionLineJumpToWordBegining<CR>
+" gS prefix is added for ViEmu, no use for VsVim AFAIK.
+"VsVim and ViEmu are disabled until PeasyMotion finishes
+
+"Whole viewport jump-to-word beginning mode:
+nnoremap <Space><Space> gS:vsc Tools.InvokePeasyMotion<CR>
+
+"Select text from current caret position to desired jump label (fwd and reverse directions supported)
+nmap ;; gS:vsc Tools.InvokePeasyMotionTextSelect<CR>
+
+"Jump to word beginning in current line
+nmap zw gS:vsc Tools.InvokePeasyMotionLineJumpToWordBegining<CR>
+"Jump to word ending in current line
+nmap ze gS:vsc Tools.InvokePeasyMotionLineJumpToWordEnding<CR>
+
+"Jump to any open document tab
+nmap ;w gS:vsc Tools.InvokePeasyMotionJumpToDocumentTab<CR>
+
+"Jump to line beginning:
+nmap ;l gS:vsc Tools.InvokePeasyMotionJumpToLineBegining<CR>
+
+"Two char search mode:
+nmap ;c gS:vsc Tools.InvokePeasyMotionTwoCharJump<CR>
 
 " Cancelar recordings con que
 map q <Nop>
