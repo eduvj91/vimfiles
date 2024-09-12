@@ -1,19 +1,16 @@
-" Settings
-
-set number "Mostrar números laterales
-set relativenumber "Números relativos
-set clipboard=unnamed "Copiar en el porta papeles general
-" set showcmd "Muestra comandos en la barra de status
-" set autoindent "Sangria con los símbolos de < y > que en modo normal
-
-
-" Keys
+set clipboard=unnamed            " Sets system synchronized clipboard register
+set number                       " Enables line numbering
+set relativenumber               " Enables relative line numbering. Along with `number` being set, produces hybrid line number mode
+set cursorline                   " Highlights the current line
+set ignorecase                   " Enables case-insensitive search
+set smartcase                    " Enables smart case search, which is case-insensitive unless uppercase letters are used
+set hlsearch                     " Enables highlighting of all matches for the search pattern
 
 " Tecla líder
 let mapleader=" "
 
 " Salir del modo Insertar
-imap jj <C-c>
+imap jj <Esc>
 
 " Mover al inicio y al final
 nmap <leader>h ^
@@ -24,24 +21,22 @@ xnoremap <leader>l g_
 
 " Borrar palabra completa
 nnoremap <leader>d diwx
-imap jd <Esc> :vsc Editar.Eliminarhastaeliniciodelapalabra<cr>i
 
 " Guardar y Salir de Vim
 nnoremap <leader>w :w<CR>
 nnoremap <leader>Q :q<CR>
-nnoremap <leader>% :so ~/vimfiles/_vsvimrc<CR>
+nnoremap <leader>% :so ~/vimfiles/_vsvimrc<cr>
 
 " Cerrar buffer
-nnoremap <leader>bd :bdelete<CR>
+nnoremap <leader>bd :bdelete<cr>
 
 " VSVIM CONFIG
-
 xnoremap <a-j> :vsc Editar.Bajarlíneasseleccionadas<cr>
 xnoremap <a-k> :vsc Editar.Subirlíneasseleccionadas<cr>
 nnoremap <a-j> :vsc Editar.Bajarlíneasseleccionadas<cr>
 nnoremap <a-k> :vsc Editar.Subirlíneasseleccionadas<cr>
-map <leader>c :vsc Editar.Alternarcomentariodelínea<cr>
-map <leader>b :vsc Editar.Alternarcomentariodebloque<cr>
+nnoremap gc :vsc Editar.Alternarcomentariodelínea<cr>
+nnoremap gb :vsc Editar.Alternarcomentariodebloque<cr>
 nnoremap <leader>f :vsc Editar.Darformatoaldocumento<cr>
 nnoremap <leader>r :vsc Editar.Cambiarnombre<cr>
 xnoremap <leader>s :vsc editar.rodearcon<cr>
