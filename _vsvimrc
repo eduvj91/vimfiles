@@ -36,7 +36,7 @@ xnoremap <a-k> :vsc Editar.Subirlíneasseleccionadas<cr>
 nnoremap <a-j> :vsc Editar.Bajarlíneasseleccionadas<cr>
 nnoremap <a-k> :vsc Editar.Subirlíneasseleccionadas<cr>
 nnoremap gc :vsc Editar.Alternarcomentariodelínea<cr>
-nnoremap gb :vsc Editar.Alternarcomentariodebloque<cr>
+nnoremap gC :vsc Editar.Alternarcomentariodebloque<cr>
 nnoremap <leader>f :vsc Editar.Darformatoaldocumento<cr>
 nnoremap <leader>r :vsc Editar.Cambiarnombre<cr>
 xnoremap <leader>s :vsc editar.rodearcon<cr>
@@ -50,30 +50,32 @@ nnoremap U :vsc Editar.Rehacer<cr>
 nnoremap ge :vsc Ver.Errorsiguiente<cr>
 nnoremap <leader>p :vsc Depurar.Iniciarsindepurar<cr>
 
+" Cancelar recordings con que
+map q <Nop>
+
 " EASYMOTION PLUG VS
-" nnoremap <leader><leader> :vsc Tools.InvokePeasyMotionLineJumpToWordBegining<CR>
 " gS prefix is added for ViEmu, no use for VsVim AFAIK.
 "VsVim and ViEmu are disabled until PeasyMotion finishes
 
 "Whole viewport jump-to-word beginning mode:
-nnoremap <Space><Space> gS:vsc Tools.InvokePeasyMotion<CR>
+nnoremap <Space><Space>; :vsc Tools.InvokePeasyMotion<CR>
 
 "Select text from current caret position to desired jump label (fwd and reverse directions supported)
-nmap ;; gS:vsc Tools.InvokePeasyMotionTextSelect<CR>
+nmap ;; :vsc Tools.InvokePeasyMotionTextSelect<CR>
 
 "Jump to word beginning in current line
-nmap zw gS:vsc Tools.InvokePeasyMotionLineJumpToWordBegining<CR>
+nmap <leader><leader>w :vsc Tools.InvokePeasyMotionLineJumpToWordBegining<CR>
 "Jump to word ending in current line
-nmap ze gS:vsc Tools.InvokePeasyMotionLineJumpToWordEnding<CR>
+nmap <leader><leader>e :vsc Tools.InvokePeasyMotionLineJumpToWordEnding<CR>
 
 "Jump to any open document tab
-nmap ;w gS:vsc Tools.InvokePeasyMotionJumpToDocumentTab<CR>
+"nmap ;w :vsc Tools.InvokePeasyMotionJumpToDocumentTab<CR>
 
 "Jump to line beginning:
-nmap ;l gS:vsc Tools.InvokePeasyMotionJumpToLineBegining<CR>
+nmap <leader><leader>l :vsc Tools.InvokePeasyMotionJumpToLineBegining<CR>
 
 "Two char search mode:
-nmap ;c gS:vsc Tools.InvokePeasyMotionTwoCharJump<CR>
+nmap <leader><leader>2s :vsc Tools.InvokePeasyMotionTwoCharJump<CR>
 
-" Cancelar recordings con que
-map q <Nop>
+"One char search mode:
+nmap <leader><leader>s :vsc Tools.InvokePeasyMotionOneCharJump<CR>
