@@ -1,3 +1,7 @@
+" ------------
+" VSVIM CONFIG
+" ------------
+
 set clipboard=unnamed            " Sets system synchronized clipboard register
 set number                       " Enables line numbering
 set relativenumber               " Enables relative line numbering. Along with `number` being set, produces hybrid line number mode
@@ -30,7 +34,6 @@ nnoremap <leader>% :so ~/vimfiles/_vsvimrc<cr>
 " Cerrar buffer
 nnoremap <leader>bd :bdelete<cr>
 
-" VSVIM CONFIG
 xnoremap <a-j> :vsc Editar.Bajarlíneasseleccionadas<cr>
 xnoremap <a-k> :vsc Editar.Subirlíneasseleccionadas<cr>
 nnoremap <a-j> :vsc Editar.Bajarlíneasseleccionadas<cr>
@@ -43,8 +46,8 @@ xnoremap <leader>s :vsc editar.rodearcon<cr>
 
 nnoremap <S-L> :vsc Ventana.Pestañasiguiente<cr>
 nnoremap <S-H> :vsc Ventana.Pestañaanterior<cr>
-nnoremap gn :vsc Herramientas.MovetoNextSpellingIssue<cr>
-nnoremap gN :vsc Herramientas.MovetoPriorSpellingIssue<cr>
+nnoremap gz :vsc Herramientas.MovetoNextSpellingIssue<cr>
+nnoremap gZ :vsc Herramientas.MovetoPriorSpellingIssue<cr>
 nnoremap u :vsc Editar.Deshacer<cr>
 nnoremap U :vsc Editar.Rehacer<cr>
 nnoremap ge :vsc Ver.Errorsiguiente<cr>
