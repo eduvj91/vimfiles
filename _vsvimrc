@@ -34,12 +34,15 @@ nnoremap <leader>% :so ~/vimfiles/_vsvimrc<cr>
 " Cerrar buffer
 nnoremap <leader>bd :bdelete<cr>
 
+" Pegado en nueva línea
+nnoremap p <c-s-cr>p
+
 xnoremap <a-j> :vsc Editar.Bajarlíneasseleccionadas<cr>
 xnoremap <a-k> :vsc Editar.Subirlíneasseleccionadas<cr>
 nnoremap <a-j> :vsc Editar.Bajarlíneasseleccionadas<cr>
 nnoremap <a-k> :vsc Editar.Subirlíneasseleccionadas<cr>
-nnoremap gc :vsc Editar.Alternarcomentariodelínea<cr>
-nnoremap gC :vsc Editar.Alternarcomentariodebloque<cr>
+map gc :vsc Editar.Alternarcomentariodelínea<cr>
+map gC :vsc Editar.Alternarcomentariodebloque<cr>
 nnoremap <leader>f :vsc Editar.Darformatoaldocumento<cr>
 nnoremap <leader>r :vsc Editar.Cambiarnombre<cr>
 xnoremap <leader>s :vsc editar.rodearcon<cr>
