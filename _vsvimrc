@@ -10,6 +10,7 @@ set ignorecase                   " Enables case-insensitive search
 set smartcase                    " Enables smart case search, which is case-insensitive unless uppercase letters are used
 set hlsearch                     " Enables highlighting of all matches for the search pattern
 
+
 " Tecla líder
 let mapleader=" "
 
