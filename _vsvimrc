@@ -65,24 +65,24 @@ map q <Nop>
 "VsVim and ViEmu are disabled until PeasyMotion finishes
 
 "Whole viewport jump-to-word beginning mode:
-nnoremap <Space><Space>; :vsc Tools.InvokePeasyMotion<CR>
+nnoremap <Space><Space> gS:vsc Tools.InvokePeasyMotion<CR>
 
 "Select text from current caret position to desired jump label (fwd and reverse directions supported)
-nmap ;; :vsc Tools.InvokePeasyMotionTextSelect<CR>
+nmap ;; gS:vsc Tools.InvokePeasyMotionTextSelect<CR>
 
 "Jump to word beginning in current line
-nmap <leader><leader>w :vsc Tools.InvokePeasyMotionLineJumpToWordBegining<CR>
+nmap zw gS:vsc Tools.InvokePeasyMotionLineJumpToWordBegining<CR>
 "Jump to word ending in current line
-nmap <leader><leader>e :vsc Tools.InvokePeasyMotionLineJumpToWordEnding<CR>
+nmap ze gS:vsc Tools.InvokePeasyMotionLineJumpToWordEnding<CR>
 
 "Jump to any open document tab
-"nmap ;w :vsc Tools.InvokePeasyMotionJumpToDocumentTab<CR>
+nmap ;w gS:vsc Tools.InvokePeasyMotionJumpToDocumentTab<CR>
 
 "Jump to line beginning:
-nmap <leader><leader>l :vsc Tools.InvokePeasyMotionJumpToLineBegining<CR>
+nmap ;l gS:vsc Tools.InvokePeasyMotionJumpToLineBegining<CR>
 
 "Two char search mode:
-nmap <leader><leader>2s :vsc Tools.InvokePeasyMotionTwoCharJump<CR>
+nmap ;c gS:vsc Tools.InvokePeasyMotionTwoCharJump<CR>
 
 "One char search mode:
-nmap <leader><leader>s :vsc Tools.InvokePeasyMotionOneCharJump<CR>
+nmap ;v gS:vsc Tools.InvokePeasyMotionOneCharJump<CR>
